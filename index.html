@@ -1,0 +1,1028 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Italy, with You · June 3–14, 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream:       #f6f0e4;
+    --paper:       #fcf8f0;
+    --ink:         #2a1d14;
+    --ink-soft:    #5c4a3d;
+    --muted:       #8a7868;
+    --terracotta:  #b8462a;
+    --terracotta-d:#8c2f1c;
+    --olive:       #5e6b3b;
+    --gold:        #c08a3e;
+    --border:      #e6d9c1;
+    --hairline:    #ead9bf;
+    --rose:        #c2664a;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+    background: var(--cream);
+    color: var(--ink);
+    line-height: 1.6;
+    font-size: 17px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* ─── HERO ─────────────────────────────────────────── */
+  .hero {
+    text-align: center;
+    padding: 80px 24px 60px;
+    background:
+      radial-gradient(circle at 20% 20%, rgba(184,70,42,0.06), transparent 50%),
+      radial-gradient(circle at 80% 60%, rgba(94,107,59,0.06), transparent 50%),
+      var(--cream);
+    border-bottom: 1px solid var(--hairline);
+  }
+  .hero .kicker {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: var(--terracotta);
+    margin-bottom: 24px;
+    font-weight: 500;
+  }
+  .hero h1 {
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 400;
+    font-size: clamp(48px, 8vw, 82px);
+    line-height: 1.02;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+    margin-bottom: 12px;
+  }
+  .hero h1 em {
+    font-style: italic;
+    color: var(--terracotta-d);
+  }
+  .hero .dates {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 22px;
+    color: var(--ink-soft);
+    margin: 8px 0 28px;
+    font-weight: 300;
+  }
+  .hero .tagline {
+    max-width: 480px;
+    margin: 0 auto;
+    color: var(--ink-soft);
+    font-size: 17px;
+  }
+  .hero .ornament {
+    margin: 32px auto 0;
+    width: 60px;
+    height: 1px;
+    background: var(--terracotta);
+    opacity: 0.6;
+  }
+
+  /* ─── STATS STRIP ────────────────────────────────── */
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1px;
+    background: var(--hairline);
+    border-top: 1px solid var(--hairline);
+    border-bottom: 1px solid var(--hairline);
+    margin-bottom: 60px;
+  }
+  .stat {
+    background: var(--paper);
+    text-align: center;
+    padding: 22px 12px;
+  }
+  .stat .n {
+    font-family: 'Fraunces', serif;
+    font-size: 32px;
+    color: var(--terracotta-d);
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+  .stat .l {
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  @media (max-width: 640px) {
+    .stats { grid-template-columns: repeat(5, 1fr); }
+    .stat { padding: 14px 4px; }
+    .stat .n { font-size: 20px; }
+    .stat .l { font-size: 8px; }
+  }
+
+  /* ─── SECTIONS ───────────────────────────────────── */
+  section { padding: 24px 0; }
+
+  .section-label {
+    font-size: 11px;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: var(--terracotta);
+    text-align: center;
+    margin-bottom: 12px;
+    font-weight: 500;
+  }
+  .section-title {
+    font-family: 'Fraunces', serif;
+    font-weight: 400;
+    font-size: 38px;
+    text-align: center;
+    margin-bottom: 8px;
+    letter-spacing: -0.01em;
+  }
+  .section-sub {
+    text-align: center;
+    color: var(--muted);
+    font-style: italic;
+    font-family: 'Fraunces', serif;
+    margin-bottom: 48px;
+    font-size: 17px;
+  }
+
+  /* ─── WEATHER ────────────────────────────────────── */
+  .weather-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+  .w-card {
+    background: var(--paper);
+    border: 1px solid var(--hairline);
+    border-radius: 4px;
+    padding: 18px 16px;
+    text-align: center;
+  }
+  .w-card .place {
+    font-family: 'Fraunces', serif;
+    font-size: 18px;
+    margin-bottom: 4px;
+    color: var(--ink);
+  }
+  .w-card .days {
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: 0.08em;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+  }
+  .w-card .temp {
+    font-family: 'Fraunces', serif;
+    font-size: 26px;
+    color: var(--terracotta-d);
+    margin-bottom: 4px;
+  }
+  .w-card .note {
+    font-size: 12px;
+    color: var(--ink-soft);
+    line-height: 1.4;
+  }
+  .w-card .icon {
+    font-size: 28px;
+    margin-bottom: 8px;
+  }
+  .weather-disclaimer {
+    font-size: 13px;
+    color: var(--muted);
+    text-align: center;
+    font-style: italic;
+    max-width: 580px;
+    margin: 0 auto;
+  }
+
+  /* ─── WEEK HEADER ────────────────────────────────── */
+  .week {
+    text-align: center;
+    margin: 48px 0 32px;
+    position: relative;
+  }
+  .week::before, .week::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 80px;
+    height: 1px;
+    background: var(--terracotta);
+    opacity: 0.4;
+  }
+  .week::before { left: calc(50% - 180px); }
+  .week::after  { right: calc(50% - 180px); }
+  .week .num {
+    font-size: 11px;
+    letter-spacing: 0.4em;
+    color: var(--terracotta);
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+  .week .name {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 26px;
+    color: var(--ink);
+  }
+  @media (max-width: 640px) {
+    .week::before, .week::after { display: none; }
+  }
+
+  /* ─── DAY CARDS ──────────────────────────────────── */
+  .day {
+    background: var(--paper);
+    border: 1px solid var(--hairline);
+    border-radius: 6px;
+    padding: 28px 28px 24px;
+    margin-bottom: 18px;
+    position: relative;
+  }
+  .day-head {
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px dashed var(--hairline);
+    margin-bottom: 18px;
+    flex-wrap: wrap;
+  }
+  .day-date {
+    font-family: 'Fraunces', serif;
+    font-size: 14px;
+    color: var(--terracotta);
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+  .day-title {
+    font-family: 'Fraunces', serif;
+    font-size: 26px;
+    font-weight: 400;
+    color: var(--ink);
+    letter-spacing: -0.01em;
+    flex: 1;
+  }
+  .day-title em { font-style: italic; color: var(--terracotta-d); }
+  .day-narrative {
+    color: var(--ink-soft);
+    margin-bottom: 16px;
+    font-size: 16px;
+  }
+  .day-narrative em {
+    color: var(--terracotta-d);
+    font-style: italic;
+  }
+  .day-narrative strong {
+    color: var(--ink);
+    font-weight: 500;
+  }
+
+  /* timeline */
+  .timeline {
+    list-style: none;
+    margin: 16px 0;
+  }
+  .timeline li {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 14px;
+    padding: 8px 0;
+    border-bottom: 1px solid #f0e7d3;
+    align-items: baseline;
+  }
+  .timeline li:last-child { border-bottom: none; }
+  .timeline .t {
+    font-family: 'Fraunces', serif;
+    font-size: 14px;
+    color: var(--terracotta);
+    font-weight: 500;
+    letter-spacing: 0.04em;
+  }
+  .timeline .c { color: var(--ink-soft); font-size: 15px; }
+
+  /* highlight box */
+  .highlight {
+    background: rgba(184,70,42,0.05);
+    border-left: 3px solid var(--terracotta);
+    padding: 14px 18px;
+    margin: 16px 0;
+    border-radius: 0 4px 4px 0;
+  }
+  .highlight .label {
+    font-size: 10px;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--terracotta);
+    margin-bottom: 6px;
+    font-weight: 600;
+  }
+  .highlight .body { font-size: 14px; color: var(--ink-soft); line-height: 1.55; }
+  .highlight .body em { color: var(--terracotta-d); }
+
+  .secret {
+    background: rgba(94,107,59,0.07);
+    border-left: 3px solid var(--olive);
+  }
+  .secret .label { color: var(--olive); }
+
+  .booked {
+    background: rgba(192,138,62,0.08);
+    border-left: 3px solid var(--gold);
+  }
+  .booked .label { color: #8a5d20; }
+
+  /* place cards */
+  .places {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 14px;
+  }
+  .place {
+    border: 1px solid var(--hairline);
+    border-radius: 4px;
+    padding: 12px 14px;
+    background: rgba(252, 248, 240, 0.6);
+    font-size: 14px;
+  }
+  .place .name {
+    font-family: 'Fraunces', serif;
+    font-size: 16px;
+    color: var(--ink);
+    margin-bottom: 2px;
+    font-weight: 500;
+  }
+  .place .desc { color: var(--ink-soft); font-size: 13px; margin-bottom: 6px; }
+  .place .links {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    font-size: 12px;
+  }
+  .place .links a {
+    color: var(--terracotta);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(184,70,42,0.3);
+    transition: color 0.15s;
+    padding-bottom: 1px;
+  }
+  .place .links a:hover {
+    color: var(--terracotta-d);
+    border-bottom-color: var(--terracotta-d);
+  }
+  .place .badge {
+    display: inline-block;
+    background: var(--gold);
+    color: #fff;
+    font-size: 9px;
+    font-weight: 600;
+    padding: 2px 6px;
+    border-radius: 3px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    vertical-align: middle;
+    margin-left: 8px;
+  }
+  .place .badge.booked { background: var(--olive); }
+  .place .badge.michelin { background: #c41e3a; }
+
+  /* ─── BOOKINGS ───────────────────────────────────── */
+  .bookings {
+    margin: 60px 0;
+  }
+  .bk-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--paper);
+    border: 1px solid var(--hairline);
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  .bk-table th {
+    text-align: left;
+    padding: 14px 16px;
+    background: #efe5d0;
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    font-size: 13px;
+    color: var(--ink);
+    letter-spacing: 0.05em;
+    border-bottom: 1px solid var(--hairline);
+  }
+  .bk-table td {
+    padding: 14px 16px;
+    border-bottom: 1px solid var(--hairline);
+    font-size: 14px;
+    color: var(--ink-soft);
+    vertical-align: top;
+  }
+  .bk-table tr:last-child td { border-bottom: none; }
+  .bk-table td.s-booked { color: var(--olive); font-weight: 500; }
+  .bk-table td.s-open   { color: var(--muted); font-style: italic; }
+  .bk-table a {
+    color: var(--terracotta);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(184,70,42,0.3);
+  }
+
+  /* ─── FOOTER ─────────────────────────────────────── */
+  footer {
+    text-align: center;
+    padding: 60px 24px 80px;
+    border-top: 1px solid var(--hairline);
+    background: var(--paper);
+    margin-top: 60px;
+  }
+  footer .closer {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 28px;
+    color: var(--ink);
+    margin-bottom: 12px;
+  }
+  footer .signature {
+    color: var(--muted);
+    font-size: 13px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  footer .heart {
+    color: var(--terracotta);
+    font-size: 24px;
+    margin: 16px 0;
+  }
+
+  /* utility */
+  .small { font-size: 13px; color: var(--muted); }
+  a { color: var(--terracotta-d); }
+</style>
+</head>
+<body>
+
+<!-- ─── HERO ─────────────────────────────────────── -->
+<div class="hero">
+  <div class="kicker">An Italian Itinerary</div>
+  <h1>Italy, <em>with you</em></h1>
+  <div class="dates">June 3 — 14, 2026</div>
+  <p class="tagline">Twelve days. Five regions. One steak on a balcony. A wedding, a Michelin dinner in a castle on the Po, and a city I want you to fall in love with.</p>
+  <div class="ornament"></div>
+</div>
+
+<!-- ─── STATS ────────────────────────────────────── -->
+<div class="stats">
+  <div class="stat"><div class="n">12</div><div class="l">Days</div></div>
+  <div class="stat"><div class="n">5</div><div class="l">Regions</div></div>
+  <div class="stat"><div class="n">1</div><div class="l">Wedding</div></div>
+  <div class="stat"><div class="n">⭐</div><div class="l">Michelin</div></div>
+  <div class="stat"><div class="n">∞</div><div class="l">Espresso</div></div>
+</div>
+
+<!-- ─── WEATHER ──────────────────────────────────── -->
+<section class="wrap">
+  <div class="section-label">Forecast</div>
+  <h2 class="section-title">What to Pack</h2>
+  <p class="section-sub">Italian June, by region</p>
+
+  <div class="weather-grid">
+    <div class="w-card">
+      <div class="icon">☀️</div>
+      <div class="place">Torino</div>
+      <div class="days">Jun 3 – 7</div>
+      <div class="temp">27° / 17°C</div>
+      <div class="note">Warm sunny days, mild evenings. Possible afternoon thunderstorms.</div>
+    </div>
+    <div class="w-card">
+      <div class="icon">🌊</div>
+      <div class="place">Langa & Riviera</div>
+      <div class="days">Jun 8 – 9</div>
+      <div class="temp">25° / 17°C</div>
+      <div class="note">Sea ~21°C — swimmable. Light layers for the hills.</div>
+    </div>
+    <div class="w-card">
+      <div class="icon">⛵</div>
+      <div class="place">Genova & 5 Terre</div>
+      <div class="days">Jun 10 – 11</div>
+      <div class="temp">24° / 16°C</div>
+      <div class="note">Bring trail shoes for the cliffs. Light jacket for the boat-rocky evenings.</div>
+    </div>
+    <div class="w-card">
+      <div class="icon">🌤️</div>
+      <div class="place">Parma & Milano</div>
+      <div class="days">Jun 12 – 14</div>
+      <div class="temp">27° / 17°C</div>
+      <div class="note">Po Valley humidity. One dressy outfit for the Michelin night.</div>
+    </div>
+  </div>
+
+  <p class="weather-disclaimer">
+    Numbers are June averages and 10-day outlooks — check
+    <a href="https://www.ilmeteo.it/" target="_blank">ilmeteo.it</a> or
+    <a href="https://www.meteoblue.com/" target="_blank">meteoblue</a> a few days out.
+  </p>
+
+  <div class="highlight" style="margin-top: 32px;">
+    <div class="label">Packing Essentials</div>
+    <div class="body">
+      Comfortable walking shoes (carruggi, cliffs, cobblestones). A light raincoat / packable umbrella. Swimsuit + a sarong. One nice outfit for the Michelin dinner. A wedding outfit. Sunscreen — the Ligurian sun is no joke in June.
+    </div>
+  </div>
+</section>
+
+<!-- ─── WEEK 1 ───────────────────────────────────── -->
+<section class="wrap">
+  <div class="week">
+    <div class="num">Week One</div>
+    <div class="name">Torino &amp; Family</div>
+  </div>
+
+  <!-- DAY 1 -->
+  <article class="day">
+    <div class="day-head">
+      <span class="day-date">Wed · Jun 3</span>
+      <h3 class="day-title">Landing in <em>Italy</em></h3>
+    </div>
+    <p class="day-narrative">
+      You touch down at <strong>12:20</strong>. Bags by 13:30, bus to Torino, in town around three. We grab a quick bite, then home — shower, breathe. Tonight is the full crew: my parents, my sister, the aunts and uncles. They've been waiting for you.
+    </p>
+    <ul class="timeline">
+      <li><span class="t">12:20</span><span class="c">Plane lands</span></li>
+      <li><span class="t">13:30</span><span class="c">Bus to Torino</span></li>
+      <li><span class="t">15:00</span><span class="c">Arrival · quick bite</span></li>
+      <li><span class="t">evening</span><span class="c">Family dinner at home 🍝</span></li>
+    </ul>
+  </article>
+
+  <!-- DAY 2 -->
+  <article class="day">
+    <div class="day-head">
+      <span class="day-date">Thu · Jun 4</span>
+      <h3 class="day-title">A <em>quiet</em> one</h3>
+    </div>
+    <p class="day-narrative">
+      Nothing on the calendar — recovery from the flight and prep for tomorrow's wedding. Late afternoon I'm taking you for a coffee in one of the old cafés. Home for dinner.
+    </p>
+    <div class="places">
+      <div class="place">
+        <div class="name">Al Bicerin</div>
+        <div class="desc">A wooden 18th-century café in Piazza della Consolata. The bicerin (espresso + chocolate + cream, in that order) was invented here.</div>
+        <div class="links">
+          <a href="https://www.google.com/maps/search/?api=1&query=Al+Bicerin+Torino" target="_blank">📍 Map</a>
+          <a href="https://www.bicerin.it/" target="_blank">🌐 Website</a>
+        </div>
+      </div>
+      <div class="place">
+        <div class="name">Baratti &amp; Milano</div>
+        <div class="desc">Belle-époque café inside the Galleria Subalpina — chandeliers, marble, gianduiotti made in-house since 1858.</div>
+        <div class="links">
+          <a href="https://www.google.com/maps/search/?api=1&query=Baratti+e+Milano+Torino" target="_blank">📍 Map</a>
+          <a href="https://www.barattiemilano.it/" target="_blank">🌐 Website</a>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- DAY 3 -->
+  <article class="day">
+    <div class="day-head">
+      <span class="day-date">Fri · Jun 5</span>
+      <h3 class="day-title">The <em>Wedding</em> 🤵👰</h3>
+    </div>
+    <p class="day-narrative">
+      Suit and dress, all day. A close friend is getting married. Expect champagne, dancing, and Italians being Italians until very late.
+    </p>
+    <div class="highlight">
+      <div class="label">Tip</div>
+      <div class="body">Comfortable shoes you can dance in. Italian weddings are a marathon, not a sprint — they typically end around 2–3 AM. Pace the food: there will be a lot.</div>
+    </div>
+  </article>
+
+  <!-- DAY 4 -->
+  <article class="day">
+    <div class="day-head">
+      <span class="day-date">Sat · Jun 6</span>
+      <h3 class="day-title">My <em>Torino</em></h3>
+    </div>
+    <p class="day-narrative">
+      Morning at the largest open-air market in Europe — the chaos, the smells, the cheese counters — then we drift next door into the vintage market. Lunch somewhere honest. In the afternoon I'm walking you through the city the way I know it.
+    </p>
+    <ul class="timeline">
+      <li><span class="t">morning</span><span class="c">Porta Palazzo market → Il Balon (vintage)</span></li>
+      <li><span class="t">lunch</span><span class="c">Somewhere local — we'll wander</span></li>
+      <li><span class="t">afternoon</span><span class="c">Piazza Castello → Galleria Subalpina → Piazza San Carlo → Via Roma → Parco del Valentino</span></li>
+      <li><span class="t">19:00</span><span class="c">Wine tasting with friends 🍷</span></li>
+      <li><span class="t">late</span><span class="c">Drinks with the crew</span></li>
+    </ul>
+    <div class="places">
+      <div class="place">
+        <div class="name">Porta Palazzo</div>
+        <div class="desc">Europe's largest open-air market. Saturday is its biggest day. Go hungry.</div>
+        <div class="links">
+          <a href="https://www.google.com/maps/search/?api=1&query=Porta+Palazzo+Torino" target="_blank">📍 Map</a>
+          <a href="https://www.mercatoportapalazzo.it/" target="_blank">🌐 Info</a>
+        </div>
+      </div>
+      <div class="place">
+        <div class="name">Il Balon</div>
+        <div class="desc">Saturday flea market right next to Porta Palazzo. Vintage, antiques, oddities.</div>
+        <div class="links">
+          <a href="https://www.google.com/maps/search/?api=1&query=Il+Balon+Torino" target="_blank">📍 Map</a>
+          <a href="https://www.balon.it/" target="_blank">🌐 Info</a>
+        </div>
+      </div>
+      <div class="place">
+        <div class="name">Mole Antonelliana &amp; Museo del Cinema</div>
+        <div class="desc">Torino's icon. Glass elevator straight up the spire for a 360° view. If your legs are still good.</div>
+        <div class="links">
+          <a href="https://www.google.com/maps/search/?api=1&query=Mole+Antonelliana+Torino" target="_blank">📍 Map</a>
+          <a href="https://www.museocinema.it/" target="_blank">🌐 Website</a>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- DAY 5 -->
+  <article class="day">
+    <div class="day-head">
+      <span class="day-date">Sun · Jun 7</span>
+      <h3 class="day-title">Sunday with the <em>compagnia</em></h3>
+    </div>
+    <p class="day-narrative">
+      A morning walk with friends down toward Porta Nuova. Lunch at <strong>Scannabue</strong> — Piedmontese, the real thing, no tourist nonsense (Michelin Bib Gourmand 2026). The afternoon stays open — we'll feel it. Evening with my old gang, dinner at home.
+    </p>
+    <div class="places">
+      <div class="place">
+        <div class="name">Scannabue Caffè Restaurant <span class="badge booked">Booked</span></div>
+        <div class="desc">San Salvario institution. Classical Piedmontese — vitello tonnato, agnolotti, finanziera. The kind of place locals don't tell tourists about.</div>
+        <div class="links">
+          <a href="https://www.google.com/maps/search/?api=1&query=Scannabue+Largo+Saluzzo+Torino" target="_blank">📍 Map</a>
+          <a href="https://www.scannabue.it/" target="_blank">🌐 Website</a>
+          <a href="tel:+390116696693">📞 011 669 6693</a>
+        </div>
+      </div>
+    </div>
+  </article>
+</section>
+
+<!-- ─── WEEK 2 ───────────────────────────────────── -->
+<section class="wrap">
+  <div class="week">
+    <div class="num">Week Two</div>
+    <div class="name">South, and Back Up</div>
+  </div>
+
+  <!-- DAY 6 -->
+  <article class="day">
+    <div class="day-head">
+      <span class="day-date">Mon · Jun 8</span>
+      <h3 class="day-title">Into the <em>Langa</em>, down to the sea</h3>
+    </div>
+    <p class="day-narrative">
+      We pack and drive into the Langa — UNESCO hills, the heart of Barolo country. First stop <strong>La Morra</strong> for the panorama. Then lunch in the vineyards. After: we hunt down a butcher for a Fassona steak — four fingers thick, vacuum-packed for the road. Then down to Albenga on the Ligurian coast. Beach in the evening. And on the balcony tonight: that steak, on the grill. 🥩
+    </p>
+    <ul class="timeline">
+      <li><span class="t">morning</span><span class="c">Drive Torino → Langa (~1h30)</span></li>
+      <li><span class="t">11:00</span><span class="c">La Morra · Belvedere panorama</span></li>
+      <li><span class="t">13:30</span><span class="c">Lunch at Le Torri, Castiglione Falletto</span></li>
+      <li><span class="t">pm</span><span class="c">Butcher run: Fassona steak</span></li>
+      <li><span class="t">late pm</span><span class="c">Drive Langa → Albenga (~2h30)</span></li>
+      <li><span class="t">evening</span><span class="c">Beach, then BBQ on the balcony 🔥</span></li>
+    </ul>
+    <div class="places">
+      <div class="place">
+        <div class="name">La Morra Belvedere</div>
+        <div class="desc">Highest village in the Barolo zone. The terrace looks over an ocean of vineyards.</div>
+        <div class="links">
+          <a href="https://www.google.com/maps/search/?api=1&query=Belvedere+La+Morra" target="_blank">📍 Map</a>
+        </div>
+      </div>
+      <div class="place">
+        <div class="name">Ristorante Le Torri <span class="badge booked">Booked 13:30</span></div>
+        <div class="desc">Piazza Vittorio Veneto 10, Castiglione Falletto. Traditional Piedmontese, panoramic over the Crus.</div>
+        <div class="links">
+          <a href="https://www.google.com/maps/search/?api=1&query=Ristorante+Le+Torri+Castiglione+Falletto" target="_blank">📍 Map</a>
+          <a href="https://www.ristoranteletorri.it/" target="_blank">🌐 Website</a>
+          <a href="tel:+39017362937">📞 0173 62937</a>
+        </div>
+      </div>
+    </div>
+    <div class="highlight secret">
+      <div class="label">Fassona Steak — Home Cookout</div>
+      <div class="body">Ask the butcher to cut at least 4 fingers thick and vacuum-seal it. Let it rest out of the fridge for 1 hour before grilling. Coarse salt only — the meat does the rest.</div>
+    </div>
+  </article>
+
+  <!-- DAY 7 -->
+  <article class="day">
+    <div class="day-head">
+      <span class="day-date">Tue · Jun 9</span>
+      <h3 class="day-title">Riviera <em>day</em></h3>
+    </div>
+    <p class="day-narrative">
+      Beach all day at Finale Ligure. Focaccia for lunch — Ligurian focaccia is its own religion. In the afternoon, a detour up to <strong>Verezzi</strong> — my secret place. I want to show it to you. Dinner in Finalborgo, the medieval village just inland.
+    </p>
+    <div class="places">
+      <div class="place">
+        <div class="name">Spiaggia del Castelletto · Finale Ligure</div>
+        <div class="desc">A quieter stretch of Finale's coast, with the cliff at your back.</div>
+        <div class="links">
+          <a href="https://www.google.com/maps/search/?api=1&query=Castelletto+Finale+Ligure" target="_blank">📍 Map</a>
+        </div>
+      </div>
+      <div class="place">
+        <div class="name">Borgio Verezzi <span class="badge">Secret</span></div>
+        <div class="desc">A medieval village clinging to the hillside above the sea. Stone streets, sudden viewpoints, sea breeze.</div>
+        <div class="links">
+          <a href="https://www.google.com/maps/search/?api=1&query=Verezzi+Borgio" target="_blank">📍 Map</a>
+        </div>
+      </div>
+      <div class="place">
+        <div class="name">Finalborgo</div>
+        <div class="desc">One of "I Borghi più belli d'Italia" — perfectly preserved medieval walls, alleys lit by lanterns at night.</div>
+        <div class="links">
+          <a href="https://www.google.com/maps/search/?api=1&query=Finalborgo" target="_blank">📍 Map</a>
+        </div>
+      </div>
+    </div>
+    <div class="highlight secret">
+      <div class="label">A note about Verezzi</div>
+      <div class="body"><em>It's a place I used to go to disappear. Not many people know about it. I've been waiting for the right person to show.</em></div>
+    </div>
+  </article>
+
+  <!-- DAY 8 -->
+  <article class="day">
+    <div class="day-head">
+      <span class="day-date">Wed · Jun 10</span>
+      <h3 class="day-title"><em>Genova</em></h3>
+    </div>
+    <p class="day-narrative">
+      We drive over, park, check in. The afternoon is ours to get lost in: <strong>Via Garibaldi</strong> and the Palazzi dei Rolli (UNESCO palazzos you can walk straight into), the <strong>San Lorenzo</strong> cathedral, the <strong>carruggi</strong> — the narrowest alleyway maze in Europe — and <strong>Boccadasse</strong> for sunset, a fishing village hidden inside the city.
+    </p>
+    <div class="highlight">
+      <div class="label">A confession</div>
+      <div class="body"><em>Genova is the city. The one I keep telling you about — the one I think could be ours one day. Wear good shoes. I want to see what you think.</em></div>
+    </div>
+    <div class="places">
+      <div class="place">
+        <div class="name">Via Garibaldi · Palazzi dei Rolli</div>
+        <div class="desc">A single street of 16th-century palaces, UNESCO-listed. Palazzo Rosso and Palazzo Bianco are open as museums.</div>
+        <div class="links">
+          <a href="https://www.google.com/maps/search/?api=1&query=Via+Garibaldi+Genova" target="_blank">📍 Map</a>
+          <a href="https://www.museidigenova.it/" target="_blank">🌐 Musei</a>
+        </div>
+      </div>
+      <div class="place">
+        <div class="name">Cattedrale di San Lorenzo</div>
+        <div class="desc">Striped marble cathedral. Inside: an unexploded WWII shell still embedded in the wall.</div>
+        <div class="links">
+          <a href="https://www.google.com/maps/search/?api=1&query=Cattedrale+San+Lorenzo+Genova" target="_blank">📍 Map</a>
+        </div>
+      </div>
+      <div class="place">
+        <div class="name">I Carruggi</div>
+        <div class="desc">The historic center — Europe's largest medieval old town. Get lost on purpose.</div>
+        <div class="links">
+          <a href="https://www.google.com/maps/search/?api=1&query=Carruggi+Genova" target="_blank">📍 Map</a>
+        </div>
+      </div>
+      <div class="place">
+        <div class="name">Boccadasse</div>
+        <div class="desc">A pastel-colored fishing hamlet inside the city. Best at golden hour. Gelato from Antica Gelateria Amedeo is mandatory.</div>
+        <div class="links">
+          <a href="https://www.google.com/maps/search/?api=1&query=Boccadasse+Genova" target="_blank">📍 Map</a>
+        </div>
+      </div>
+      <div class="place">
+        <div class="name">Dinner</div>
+        <div class="desc">I'm finding the right spot — somewhere with the city in it. Will update before we go.</div>
+        <div class="links"><a>🔍 TBD</a></div>
+      </div>
+    </div>
+  </article>
+
+  <!-- DAY 9 -->
+  <article class="day">
+    <div class="day-head">
+      <span class="day-date">Thu · Jun 11</span>
+      <h3 class="day-title">Cinque <em>Terre</em></h3>
+    </div>
+    <p class="day-narrative">
+      Early-ish start. Drive to <strong>Levanto</strong>, check into the hotel, leave the car. Train to <strong>Riomaggiore</strong>. <strong>Via dell'Amore</strong> — booked. Then Manarola, then Vernazza — three of the five lands, each one steeper and prettier than the last. Night back in Levanto, by the sea.
+    </p>
+    <ul class="timeline">
+      <li><span class="t">am</span><span class="c">Drive Genova → Levanto (~1h30), check-in</span></li>
+      <li><span class="t">train</span><span class="c">Levanto → Riomaggiore</span></li>
+      <li><span class="t">walk</span><span class="c">Via dell'Amore (30 min cliff path)</span></li>
+      <li><span class="t">→</span><span class="c">Manarola — pastel houses on the cliff</span></li>
+      <li><span class="t">→</span><span class="c">Vernazza — harbor, tower, swim if it's warm</span></li>
+      <li><span class="t">evening</span><span class="c">Train back to Levanto, dinner by the sea</span></li>
+    </ul>
+    <div class="places">
+      <div class="place">
+        <div class="name">Via dell'Amore <span class="badge booked">Booked</span></div>
+        <div class="desc">The famous coastal path between Riomaggiore and Manarola. Reopened in 2024 after 12 years of repairs. 30-min slots, max 200 people per slot, entrance from Riomaggiore.</div>
+        <div class="links">
+          <a href="https://www.viadellamore.info/" target="_blank">🌐 viadellamore.info</a>
+          <a href="https://www.google.com/maps/search/?api=1&query=Via+dell%27Amore+Riomaggiore" target="_blank">📍 Map</a>
+        </div>
+      </div>
+      <div class="place">
+        <div class="name">Manarola</div>
+        <div class="desc">The most photographed of the five. The viewpoint from Punta Bonfiglio at sunset is the postcard shot.</div>
+        <div class="links">
+          <a href="https://www.google.com/maps/search/?api=1&query=Manarola" target="_blank">📍 Map</a>
+        </div>
+      </div>
+      <div class="place">
+        <div class="name">Vernazza</div>
+        <div class="desc">Tiny natural harbor, Doria castle on the cliff. The path up to the castle is worth the climb.</div>
+        <div class="links">
+          <a href="https://www.google.com/maps/search/?api=1&query=Vernazza" target="_blank">📍 Map</a>
+        </div>
+      </div>
+    </div>
+    <div class="highlight">
+      <div class="label">Cinque Terre Card</div>
+      <div class="body">Buy a <strong>Cinque Terre Treno MS Card</strong> at Levanto station (around €19/day). Covers unlimited trains between all five villages + the trail network. Via dell'Amore costs €10 extra on top.</div>
+    </div>
+  </article>
+
+  <!-- DAY 10 -->
+  <article class="day">
+    <div class="day-head">
+      <span class="day-date">Fri · Jun 12</span>
+      <h3 class="day-title">Levanto → Parma → <em>Milano</em></h3>
+    </div>
+    <p class="day-narrative">
+      Morning drive to Parma. We walk the city: Piazza Duomo, the <strong>Battistero</strong> (pink Verona marble, one of the most beautiful in Italy), the Palazzo della Pilotta. Then — the day's main event — <strong>dinner at Antica Corte Pallavicina</strong>. A Michelin-starred restaurant inside a 14th-century castle on the Po river, where the Spigaroli brothers age culatello in the cellars beneath the dining room. After dinner, we drive on to Milan and check in.
+    </p>
+    <ul class="timeline">
+      <li><span class="t">am</span><span class="c">Drive Levanto → Parma (~2h30)</span></li>
+      <li><span class="t">midday</span><span class="c">Walk Parma · Duomo, Battistero, Pilotta</span></li>
+      <li><span class="t">pm</span><span class="c">Drive Parma → Polesine Parmense (~45 min)</span></li>
+      <li><span class="t">evening</span><span class="c">Dinner at Antica Corte Pallavicina ⭐</span></li>
+      <li><span class="t">night</span><span class="c">Drive to Milano (~1h45), check-in</span></li>
+    </ul>
+    <div class="places">
+      <div class="place">
+        <div class="name">Battistero di Parma</div>
+        <div class="desc">12th-century octagonal baptistery in pink Verona marble. Outside and inside, one of the most beautiful religious buildings in Italy.</div>
+        <div class="links">
+          <a href="https://www.google.com/maps/search/?api=1&query=Battistero+Parma" target="_blank">📍 Map</a>
+          <a href="https://www.piazzaduomoparma.com/" target="_blank">🌐 Tickets</a>
+        </div>
+      </div>
+      <div class="place">
+        <div class="name">Antica Corte Pallavicina <span class="badge michelin">⭐ Booked</span></div>
+        <div class="desc">A 14th-century river castle on the Po, owned by the Spigaroli brothers. The cellars beneath your table age the most coveted culatello on earth. "Gastrofluvial" cuisine — fish from the river, herbs from the garden, recipes from another century.</div>
+        <div class="links">
+          <a href="https://www.google.com/maps/search/?api=1&query=Antica+Corte+Pallavicina+Polesine+Parmense" target="_blank">📍 Map</a>
+          <a href="https://www.anticacortepallavicinarelais.it/" target="_blank">🌐 Website</a>
+          <a href="https://guide.michelin.com/us/en/emilia-romagna/polesine-parmense/restaurant/antica-corte-pallavicina" target="_blank">⭐ Michelin</a>
+        </div>
+      </div>
+    </div>
+    <div class="highlight booked">
+      <div class="label">Dress code reminder</div>
+      <div class="body">Smart-elegant. Not black-tie, but Italian-elegant. A dress for you, a jacket for me. This is the dressiest meal of the trip.</div>
+    </div>
+  </article>
+
+  <!-- DAY 11 -->
+  <article class="day">
+    <div class="day-head">
+      <span class="day-date">Sat · Jun 13</span>
+      <h3 class="day-title"><em>Milano</em></h3>
+    </div>
+    <p class="day-narrative">
+      A full day in the city. I'm keeping this loose — we'll feel it out depending on the weather and the mood. Dinner: somewhere worth it.
+    </p>
+    <div class="places">
+      <div class="place">
+        <div class="name">Duomo &amp; Terraces</div>
+        <div class="desc">Book the terrazze online in advance — being on top of the cathedral is the experience, not the view from below.</div>
+        <div class="links">
+          <a href="https://www.google.com/maps/search/?api=1&query=Duomo+Milano" target="_blank">📍 Map</a>
+          <a href="https://www.duomomilano.it/en/tickets/" target="_blank">🎟️ Tickets</a>
+        </div>
+      </div>
+      <div class="place">
+        <div class="name">Brera</div>
+        <div class="desc">The painters' quarter. Cobblestones, galleries, bookshops, aperitivo bars. The Pinacoteca is one of Italy's great art museums.</div>
+        <div class="links">
+          <a href="https://www.google.com/maps/search/?api=1&query=Brera+Milano" target="_blank">📍 Map</a>
+        </div>
+      </div>
+      <div class="place">
+        <div class="name">Navigli</div>
+        <div class="desc">Canal district, perfect for aperitivo at golden hour. Crowded but the energy is right.</div>
+        <div class="links">
+          <a href="https://www.google.com/maps/search/?api=1&query=Navigli+Milano" target="_blank">📍 Map</a>
+        </div>
+      </div>
+      <div class="place">
+        <div class="name">Dinner</div>
+        <div class="desc">TBD — I'll lock it down before we get there.</div>
+        <div class="links"><a>🔍 TBD</a></div>
+      </div>
+    </div>
+  </article>
+
+  <!-- DAY 12 -->
+  <article class="day">
+    <div class="day-head">
+      <span class="day-date">Sun · Jun 14</span>
+      <h3 class="day-title">The <em>last</em> morning</h3>
+    </div>
+    <p class="day-narrative">
+      Easy start. An hour or two of Milan if we're up for it — coffee in Brera, one last walk. By <strong>11:30</strong> we're moving — Malpensa Express to the airport, on the ground at <strong>13:00</strong>. Your flight at <strong>17:00</strong>. I'll wait until you're through.
+    </p>
+    <ul class="timeline">
+      <li><span class="t">am</span><span class="c">Slow breakfast · last walk</span></li>
+      <li><span class="t">11:30</span><span class="c">Leave for Malpensa</span></li>
+      <li><span class="t">13:00</span><span class="c">At the airport</span></li>
+      <li><span class="t">17:00</span><span class="c">Volo Monica ✈️</span></li>
+    </ul>
+    <div class="highlight">
+      <div class="label">Malpensa Express</div>
+      <div class="body">From Milano Cadorna or Centrale, the <a href="https://www.malpensaexpress.it/en/" target="_blank">Malpensa Express</a> runs every 30 minutes. Travel time 45–55 min. Buy tickets at the station or via the Trenord app.</div>
+    </div>
+  </article>
+</section>
+
+<!-- ─── BOOKINGS ─────────────────────────────────── -->
+<section class="wrap bookings">
+  <div class="section-label">Status</div>
+  <h2 class="section-title">The Bookings</h2>
+  <p class="section-sub">Locked &amp; open</p>
+
+  <table class="bk-table">
+    <thead>
+      <tr><th>When</th><th>Where</th><th>Status</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Sun · Jun 7</strong><br><span class="small">lunch</span></td>
+        <td><a href="https://www.scannabue.it/" target="_blank">Scannabue</a> · Torino</td>
+        <td class="s-booked">✓ Booked</td>
+      </tr>
+      <tr>
+        <td><strong>Mon · Jun 8</strong><br><span class="small">13:30</span></td>
+        <td><a href="https://www.ristoranteletorri.it/" target="_blank">Le Torri</a> · Castiglione Falletto</td>
+        <td class="s-booked">✓ Booked</td>
+      </tr>
+      <tr>
+        <td><strong>Thu · Jun 11</strong></td>
+        <td><a href="https://www.viadellamore.info/" target="_blank">Via dell'Amore</a> · Cinque Terre</td>
+        <td class="s-booked">✓ Booked</td>
+      </tr>
+      <tr>
+        <td><strong>Fri · Jun 12</strong><br><span class="small">dinner</span></td>
+        <td><a href="https://www.anticacortepallavicinarelais.it/" target="_blank">Antica Corte Pallavicina ⭐</a> · Polesine Parmense</td>
+        <td class="s-booked">✓ Booked</td>
+      </tr>
+      <tr>
+        <td><strong>Sat · Jun 6</strong><br><span class="small">lunch</span></td>
+        <td>Torino — we'll wander</td>
+        <td class="s-open">open</td>
+      </tr>
+      <tr>
+        <td><strong>Wed · Jun 10</strong><br><span class="small">dinner</span></td>
+        <td>Genova — hunting</td>
+        <td class="s-open">open</td>
+      </tr>
+      <tr>
+        <td><strong>Sat · Jun 13</strong><br><span class="small">day + dinner</span></td>
+        <td>Milano — improvising</td>
+        <td class="s-open">open</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- ─── FOOTER ───────────────────────────────────── -->
+<footer>
+  <div class="closer">Andiamo.</div>
+  <div class="heart">❤︎</div>
+  <div class="signature">Italy · June 2026</div>
+</footer>
+
+</body>
+</html>
